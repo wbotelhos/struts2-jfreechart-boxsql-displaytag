@@ -6,9 +6,10 @@ import org.junit.Test;
 
 public class PurchasesActionTest {
 
+	private PurchaseAction action = new PurchaseAction();
+
 	@Test
-	public void testExecute() {
-		PurchaseAction action = new PurchaseAction();
+	public void shouldExecute() {
 		assertEquals("success", action.execute());
 		assertEquals(3, action.getLastMonthList().size());
 		assertEquals(3, action.getActualMonthList().size());
