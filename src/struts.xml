@@ -5,6 +5,8 @@
 	<include file="struts-default.xml" />
 
 	<package name="default" extends="struts-default">
-		
+		<action name="Purchase" class="com.bi.action.PurchaseAction">
+			<result>purchase.jsp</result>
+		</action>
 	</package>
 </struts>
