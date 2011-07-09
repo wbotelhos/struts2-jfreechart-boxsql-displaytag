@@ -13,9 +13,10 @@
 		<s:head theme="ajax" debug="true" />
 	</head>
 	<body>
-		<s:tabbedPanel id="tabbed">
-			<s:div label="Purchases" href="purchase.jsp" theme="ajax" refreshOnShow="true" executeScripts="true" cssClass="hidden"></s:div>
-			<s:div label="Sales" href="sale.jsp" theme="ajax" refreshOnShow="true" executeScripts="true" cssClass="hidden"></s:div>
-		</s:tabbedPanel>
+		<s:url id="purchaseUrl" action="Purchase" />
+		<s:url id="saleUrl" action="Sale" />
+
+		<s:div label="Purchases" href="%{purchaseUrl}" theme="ajax" refreshOnShow="true" executeScripts="true" cssClass="hidden"></s:div>
+		<s:div label="Sales" href="%{saleUrl}" theme="ajax" refreshOnShow="true" executeScripts="true" cssClass="hidden"></s:div>
 	</body>
 </html>
