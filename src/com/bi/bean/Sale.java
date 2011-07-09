@@ -2,23 +2,15 @@ package com.bi.bean;
 
 public class Sale {
 
-	private double total;
 	private String month;
+	private double total;
 
 	public Sale() {
 
 	}
 
-	public Sale(double total, String month) {
-		this.total = total;
+	public Sale(String month, double total) {
 		this.month = month;
-	}
-
-	public double getTotal() {
-		return total;
-	}
-
-	public void setTotal(double total) {
 		this.total = total;
 	}
 
@@ -28,6 +20,14 @@ public class Sale {
 
 	public void setMonth(String month) {
 		this.month = month;
+	}
+
+	public double getTotal() {
+		return total;
+	}
+
+	public void setTotal(double total) {
+		this.total = total;
 	}
 
 }
