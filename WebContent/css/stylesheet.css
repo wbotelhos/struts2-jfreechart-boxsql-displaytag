@@ -1,3 +1,5 @@
 @CHARSET 'UTF-8'; 
 
 body { font: normal 12px verdana; }
+
+.hidden { display: block; }
