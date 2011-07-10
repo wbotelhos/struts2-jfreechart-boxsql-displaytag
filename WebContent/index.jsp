@@ -23,5 +23,13 @@
 			<s:div label="Purchases" href="%{purchaseUrl}" theme="ajax" refreshOnShow="true" executeScripts="true" cssClass="hidden"></s:div>
 			<s:div id="tab-sale" label="Sales" href="%{saleUrl}" theme="ajax" refreshOnShow="true" executeScripts="true" cssClass="hidden"></s:div>
 		</s:tabbedPanel>
+
+		<script type="text/javascript">
+			function showPurchaseDetails(number, date, item, total) {
+				var url = 'purchaseDetails.jsp?number=' + number + '&date=' + date + '&item=' + item + '&total=' + total;
+		
+				window.open(url, null, 'height=200, width=300, status=yes, toolbar=no, menubar=no, location=no');
+			};
+		</script>
 	</body>
 </html>
