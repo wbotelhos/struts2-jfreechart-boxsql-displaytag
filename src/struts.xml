@@ -4,13 +4,17 @@
 <struts>
 	<include file="struts-default.xml" />
 
-	<package name="default" extends="struts-default">
+	<package name="default" extends="struts-default, jfreechart-default">
 		<action name="Purchase" class="com.bi.action.PurchaseAction">
 			<result>purchase.jsp</result>
 		</action>
 
 		<action name="Sale!*" method="{1}" class="com.bi.action.SaleAction">
-			<result name="success">sale.jsp</result>
+			<result>sale.jsp</result>
+			<result name="chartSuccess" type="chart">
+				<param name="width">400</param>
+				<param name="height">300</param>
+			</result>
 		</action>
 	</package>
 </struts>
