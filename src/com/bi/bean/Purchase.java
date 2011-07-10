@@ -1,8 +1,11 @@
 package com.bi.bean;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Purchase {
+public class Purchase implements Serializable {
+
+	private static final long serialVersionUID = 3195971119517378271L;
 
 	private String purchaseNumber;
 	private Date date;
