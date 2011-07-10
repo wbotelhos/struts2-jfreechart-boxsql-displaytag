@@ -8,7 +8,7 @@
 
 	<%-- O nome do atributo do bean deve ser igual ao nome da coluna no banco. Não usar como "purchaseNumber". --%>
 	<display:column sortProperty="number" title="Number" sortable="true">
-		<a href="javascript:void(0);">${item.number}</a>
+		<a href="javascript:void(0);" onclick="showPurchaseDetails('${item.number}', '${item.date}', '${item.item}', '${item.total}');">${item.number}</a>
 	</display:column>
 
 	<display:column property="item" title="Item" />
