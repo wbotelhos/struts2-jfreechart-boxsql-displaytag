@@ -1,39 +1,48 @@
 package com.bi.dao;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
+
+import org.boxsql.BoxSQL;
 
 import com.bi.bean.Purchase;
 
 public class PurchaseDAO {
 
-	public Collection<Purchase> getLastMonthPurchases() {
-		Collection<Purchase> purchaseList = new ArrayList<Purchase>();
+	private static final String SQL_MONTH_FILE = "monthPurchases.sql";
+	private static final String SQL_YEAR_FILE = "yearPurchases.sql";
 
-		purchaseList.add(new Purchase("1", new Date(), "iPhone", "1000"));
-		purchaseList.add(new Purchase("2", new Date(), "Macbook", "2000"));
-		purchaseList.add(new Purchase("3", new Date(), "iMac", "3000"));
+	private BoxSQL box = new BoxSQL();
+	private Class<Purchase> clazz = Purchase.class;
+
+	public Collection<Purchase> getLastMonthPurchases() {
+		box.setParameter("month", "12");
+
+		@SuppressWarnings("unchecked")
+		Collection<Purchase> purchaseList = box.getList(SQL_MONTH_FILE, clazz);
+	      
+		box.release();
 
 		return purchaseList;
 	}
 
 	public Collection<Purchase> getActualMonthPurchases() {
-		Collection<Purchase> purchaseList = new ArrayList<Purchase>();
+		box.setParameter("month", "10");
 
-		purchaseList.add(new Purchase("1", new Date(), "iPhone", "1000"));
-		purchaseList.add(new Purchase("2", new Date(), "Macbook", "2000"));
-		purchaseList.add(new Purchase("3", new Date(), "iMac", "3000"));
+		@SuppressWarnings("unchecked")
+		Collection<Purchase> purchaseList = box.getList(SQL_MONTH_FILE, clazz);
+	      
+		box.release();
 
 		return purchaseList;
 	}
 
 	public Collection<Purchase> getYearPurchases() {
-		Collection<Purchase> purchaseList = new ArrayList<Purchase>();
+		box.setParameter("year", "2011");
 
-		purchaseList.add(new Purchase("1", new Date(), "iPhone", "1000"));
-		purchaseList.add(new Purchase("2", new Date(), "Macbook", "2000"));
-		purchaseList.add(new Purchase("3", new Date(), "iMac", "3000"));
+		@SuppressWarnings("unchecked")
+		Collection<Purchase> purchaseList = box.getList(SQL_YEAR_FILE, clazz);
+
+		box.release();
 
 		return purchaseList;
 	}
