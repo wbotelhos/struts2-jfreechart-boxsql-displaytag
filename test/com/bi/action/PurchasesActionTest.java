@@ -11,9 +11,9 @@ public class PurchasesActionTest {
 	@Test
 	public void shouldExecute() {
 		assertEquals("success", action.execute());
-		assertEquals(3, action.getLastMonthList().size());
-		assertEquals(3, action.getActualMonthList().size());
-		assertEquals(3, action.getYearList().size());
+		assertEquals(1, action.getLastMonthList().size());
+		assertEquals(1, action.getActualMonthList().size());
+		assertEquals(1, action.getYearList().size());
 	}
 
 }

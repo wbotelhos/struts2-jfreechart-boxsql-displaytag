@@ -1,0 +1,83 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.1.42
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema bi
+--
+
+CREATE DATABASE IF NOT EXISTS bi;
+USE bi;
+
+--
+-- Definition of table `bi`.`purchase`
+--
+
+DROP TABLE IF EXISTS `bi`.`purchase`;
+CREATE TABLE  `bi`.`purchase` (
+  `number` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `item` varchar(45) NOT NULL DEFAULT '',
+  `total` double NOT NULL DEFAULT '0',
+  PRIMARY KEY (`number`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bi`.`purchase`
+--
+
+/*!40000 ALTER TABLE `purchase` DISABLE KEYS */;
+LOCK TABLES `purchase` WRITE;
+INSERT INTO `bi`.`purchase` VALUES  (1,'2010-10-10 10:10:10','1',1),
+ (2,'2011-11-11 11:11:11','2',2),
+ (3,'2012-12-12 12:12:12','3',3);
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `purchase` ENABLE KEYS */;
+
+
+--
+-- Definition of table `bi`.`sale`
+--
+
+DROP TABLE IF EXISTS `bi`.`sale`;
+CREATE TABLE  `bi`.`sale` (
+  `month` varchar(3) NOT NULL DEFAULT '',
+  `total` double NOT NULL DEFAULT '0',
+  `seq` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`month`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bi`.`sale`
+--
+
+/*!40000 ALTER TABLE `sale` DISABLE KEYS */;
+LOCK TABLES `sale` WRITE;
+INSERT INTO `bi`.`sale` VALUES  ('OCT',10,1),
+ ('NOV',11,2),
+ ('DEC',12,3);
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `sale` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
