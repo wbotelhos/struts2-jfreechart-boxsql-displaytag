@@ -28,7 +28,7 @@ USE bi;
 DROP TABLE IF EXISTS `bi`.`purchase`;
 CREATE TABLE  `bi`.`purchase` (
   `number` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `date` date NOT NULL,
   `item` varchar(45) NOT NULL DEFAULT '',
   `total` double NOT NULL DEFAULT '0',
   PRIMARY KEY (`number`)
@@ -40,9 +40,9 @@ CREATE TABLE  `bi`.`purchase` (
 
 /*!40000 ALTER TABLE `purchase` DISABLE KEYS */;
 LOCK TABLES `purchase` WRITE;
-INSERT INTO `bi`.`purchase` VALUES  (1,'2010-10-10 10:10:10','1',1),
- (2,'2011-11-11 11:11:11','2',2),
- (3,'2012-12-12 12:12:12','3',3);
+INSERT INTO `bi`.`purchase` VALUES  (1,'2010-10-10','1',1),
+ (2,'2011-11-11','2',2),
+ (3,'2012-12-12','3',3);
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `purchase` ENABLE KEYS */;
 
@@ -56,6 +56,7 @@ CREATE TABLE  `bi`.`sale` (
   `month` varchar(3) NOT NULL DEFAULT '',
   `total` double NOT NULL DEFAULT '0',
   `seq` int(10) unsigned NOT NULL DEFAULT '0',
+  `date` date DEFAULT NULL,
   PRIMARY KEY (`month`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -65,9 +66,9 @@ CREATE TABLE  `bi`.`sale` (
 
 /*!40000 ALTER TABLE `sale` DISABLE KEYS */;
 LOCK TABLES `sale` WRITE;
-INSERT INTO `bi`.`sale` VALUES  ('OCT',10,1),
- ('NOV',11,2),
- ('DEC',12,3);
+INSERT INTO `bi`.`sale` VALUES  ('OCT',10,1,'2010-10-10'),
+ ('NOV',11,2,'2011-11-11'),
+ ('DEC',12,3,'2012-12-12');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `sale` ENABLE KEYS */;
 
