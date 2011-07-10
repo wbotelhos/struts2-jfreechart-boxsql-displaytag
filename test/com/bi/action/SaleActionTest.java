@@ -18,7 +18,7 @@ public class SaleActionTest {
 
 	@Test
 	public void shouldListSixMonthOfSales() {
-		assertEquals("success", action.listSixMonthOfSales());
+		assertEquals("success", action.listSixMonthsOfSales());
 		assertEquals(3, action.getSaleMap().size());
 		assertTrue(action.getSaleMap().containsKey("OCT"));
 	}

@@ -20,7 +20,7 @@ public class SaleAction {
 	private String startDate;
 	private String endDate;
 
-	public String listSixMonthOfSales() {
+	public String listSixMonthsOfSales() {
 		saleMap = new LinkedHashMap<String, Sale>();
 
 		Collection<Sale> saleList = dao.getLastSixMonthsOfSales(startDate, endDate);
