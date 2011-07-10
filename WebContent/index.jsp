@@ -16,7 +16,7 @@
 		<s:tabbedPanel id="tabs">
 			<s:url id="purchaseUrl" action="Purchase" />
 			<s:url id="saleUrl" action="Sale!listSixMonthsOfSales">
-				<s:param name="startDate">2000-01-01</s:param>
+				<s:param name="startDate">2010-01-01</s:param>
 				<s:param name="endDate">2012-12-12</s:param>
 			</s:url>
 	

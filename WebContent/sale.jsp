@@ -11,11 +11,11 @@
 
 <s:form action="Sale!listSixMonthsOfSales">
 	<table>
-		<s:datetimepicker label="Start Date" name="startDate" displayFormat="dd/MM/yyyy" />	
-		<s:datetimepicker label="End Date" name="endDate" displayFormat="dd/MM/yyyy" />
+		<s:datetimepicker label="Start Date" name="startDate" displayFormat="yyyy-MM-dd" />	
+		<s:datetimepicker label="End Date" name="endDate" displayFormat="yyyy-MM-dd" />
 		<s:submit theme="ajax" targets="tab-sale" value="Show" />	
 	</table>
 </s:form>
 
 <%-- Adicionar parâmetro na URL para evitar bug na formação da mesma. --%>
-<img src="${pageContext.request.contextPath}/Sale!createChart.action?startDate${startDate}&endDate=${endDate}" alt="Sale chart" />
+<img src="${pageContext.request.contextPath}/Sale!createChart.action?startDate=${startDate}&endDate=${endDate}" alt="Sale chart" />
