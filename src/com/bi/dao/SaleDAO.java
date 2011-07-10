@@ -1,18 +1,20 @@
 package com.bi.dao;
 
-import java.util.ArrayList;
 import java.util.Collection;
+
+import org.boxsql.BoxSQL;
 
 import com.bi.bean.Sale;
 
 public class SaleDAO {
 
 	public Collection<Sale> getLastSixMonthsOfSales() {
-		Collection<Sale> saleList = new ArrayList<Sale>();
+		BoxSQL box = new BoxSQL();
 
-		saleList.add(new Sale("OCT", 10000.0));
-		saleList.add(new Sale("NOV", 11000.0));
-		saleList.add(new Sale("DEC", 12000.0));
+		@SuppressWarnings("unchecked")
+		Collection<Sale> saleList = box.getList("listSixMonthsOfSales.sql", Sale.class);
+
+		box.release();
 
 		return saleList;
 	}
