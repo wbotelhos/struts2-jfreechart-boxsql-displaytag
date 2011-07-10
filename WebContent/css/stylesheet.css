@@ -3,3 +3,8 @@
 body { font: normal 12px verdana; }
 
 .hidden { display: block; }
+
+.titulo {
+	font: bold 12px verdana;
+	margin-top: 10px;
+}
