@@ -11,26 +11,26 @@ public class SaleAction {
 
 	private SaleDAO dao = new SaleDAO();
 
-	private Map<String, Sale> salesMap;
+	private Map<String, Sale> saleMap;
 
 	public String listSixMonthOfSales() {
-		salesMap = new LinkedHashMap<String, Sale>();
+		saleMap = new LinkedHashMap<String, Sale>();
 
 		Collection<Sale> saleList = dao.getLastSixMonthsOfSales();
 
 		for (Sale sale : saleList) {
-			salesMap.put(sale.getMonth(), sale);
+			saleMap.put(sale.getMonth(), sale);
 		}
 
 		return "success";
 	}
 
-	public Map<String, Sale> getSalesMap() {
-		return salesMap;
+	public Map<String, Sale> getSaleMap() {
+		return saleMap;
 	}
 
-	public void setSalesMap(Map<String, Sale> salesMap) {
-		this.salesMap = salesMap;
+	public void setSaleMap(Map<String, Sale> saleMap) {
+		this.saleMap = saleMap;
 	}
 
 }
