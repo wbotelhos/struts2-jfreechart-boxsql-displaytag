@@ -8,5 +8,9 @@
 		<action name="Purchase" class="com.bi.action.PurchaseAction">
 			<result>purchase.jsp</result>
 		</action>
+
+		<action name="Sale!*" method="{1}" class="com.bi.action.SaleAction">
+			<result name="success">sale.jsp</result>
+		</action>
 	</package>
 </struts>
