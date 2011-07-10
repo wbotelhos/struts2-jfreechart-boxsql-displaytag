@@ -9,4 +9,4 @@
 
 <div class="titulo">Gr&aacute;fico:</div>
 
-<img src="chart.jsp" alt="Sale chart" />
+<img src="${pageContext.request.contextPath}/Sale!createChart.action?dummy" alt="Sale chart" />
