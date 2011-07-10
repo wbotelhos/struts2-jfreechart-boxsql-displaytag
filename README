@@ -19,4 +19,8 @@
  * ognl-2.6.11.jar
  * commons-logging-1.0.4.jar
  *
+ * jfreechart-1.0.3.jar
+ * jcommon-1.0.6.jar
+ * struts2-jfreechart-plugin-2.0.7.jar
+ *
  */ 
