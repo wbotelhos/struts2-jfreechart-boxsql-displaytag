@@ -7,7 +7,7 @@
 	<s:date name="date" format="dd/MM/yyyy" />
 	<s:property value="item"/>
 	<s:property value="total"/><br/>
-</s:iterator><br/><br/>
+</s:iterator>
 
 <div class="titulo">Last Month:</div>
 
@@ -16,7 +16,7 @@
 	<s:date name="date" format="dd/MM/yyyy" />
 	<s:property value="item"/>
 	<s:property value="total"/><br/>
-</s:iterator><br/><br/>
+</s:iterator>
 
 <div class="titulo">Year:</div>
 
