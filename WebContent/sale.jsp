@@ -2,5 +2,5 @@
 
 <s:iterator value="saleMap">
 	<s:property value="value.month"/>
-	<s:property value="value.total"/>
+	<s:property value="value.total"/><br/>
 </s:iterator>
