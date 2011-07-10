@@ -1,13 +1,13 @@
 /**
- * Project based on the video lesson "Uma Aplicação Completa com Struts 2" made by Fernando Almeida.
- * -------------------------------------------------------------------------------------------------
+ * Based on the video lesson "Uma Aplicação Completa com Struts 2" made by Felipe Almeida.
+ * ---------------------------------------------------------------------------------------
  *
  * @author      Washington Botelho dos Santos
  * @link        http://wbotelhos.com.br
  * @twitter     http://twitter.com/wbotelhos
  *
  * Originals Libraries 
- * ------------------------------------------------------------------------------------------------- 
+ * ---------------------------------------------------------------------------------------
  * boxsql-1.5.jar 
  * commons-dbutils-1.1.jar 
  * mysql-connector-java-3.1.11-bin.jar 
