@@ -17,11 +17,13 @@ public class SaleAction {
 
 	private Map<String, Sale> saleMap;
 	private JFreeChart chart;
+	private String startDate;
+	private String endDate;
 
 	public String listSixMonthOfSales() {
 		saleMap = new LinkedHashMap<String, Sale>();
 
-		Collection<Sale> saleList = dao.getLastSixMonthsOfSales();
+		Collection<Sale> saleList = dao.getLastSixMonthsOfSales(startDate, endDate);
 
 		for (Sale sale : saleList) {
 			saleMap.put(sale.getMonth(), sale);
@@ -31,7 +33,7 @@ public class SaleAction {
 	}
 
 	public String createChart() {
-		chart = saleChart.createSalesChart();
+		chart = saleChart.createSalesChart(startDate, endDate);
 		return "chartSuccess";
 	}
 
@@ -49,6 +51,22 @@ public class SaleAction {
 
 	public void setChart(JFreeChart chart) {
 		this.chart = chart;
+	}
+
+	public String getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
+	}
+
+	public String getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(String endDate) {
+		this.endDate = endDate;
 	}
 
 }

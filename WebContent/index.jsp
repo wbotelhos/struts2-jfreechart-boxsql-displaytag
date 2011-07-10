@@ -15,10 +15,13 @@
 	<body>
 		<s:tabbedPanel id="tabs">
 			<s:url id="purchaseUrl" action="Purchase" />
-			<s:url id="saleUrl" action="Sale!listSixMonthOfSales" />
+			<s:url id="saleUrl" action="Sale!listSixMonthOfSales">
+				<s:param name="startDate">2000-01-01</s:param>
+				<s:param name="endDate">2012-12-12</s:param>
+			</s:url>
 	
 			<s:div label="Purchases" href="%{purchaseUrl}" theme="ajax" refreshOnShow="true" executeScripts="true" cssClass="hidden"></s:div>
-			<s:div label="Sales" href="%{saleUrl}" theme="ajax" refreshOnShow="true" executeScripts="true" cssClass="hidden"></s:div>
+			<s:div id="tab-sale" label="Sales" href="%{saleUrl}" theme="ajax" refreshOnShow="true" executeScripts="true" cssClass="hidden"></s:div>
 		</s:tabbedPanel>
 	</body>
 </html>

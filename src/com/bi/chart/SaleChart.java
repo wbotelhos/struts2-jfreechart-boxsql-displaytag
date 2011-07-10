@@ -14,10 +14,10 @@ public class SaleChart {
 
 	private SaleDAO sDAO = new SaleDAO();
 
-	public JFreeChart createSalesChart() {
+	public JFreeChart createSalesChart(String startDate, String endDate) {
 		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 
-		Collection<Sale> saleList = sDAO.getLastSixMonthsOfSales();
+		Collection<Sale> saleList = sDAO.getLastSixMonthsOfSales(startDate, endDate);
 
 		for (Sale sale : saleList) {
 			dataset.addValue(sale.getTotal(), "Sales", sale.getMonth());
