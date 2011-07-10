@@ -11,9 +11,9 @@ public class SaleActionTest {
 
 	@Test
 	public void shouldListSixMonthOfSales() {
-		assertEquals("success", action.list6MonthSales());
-		assertEquals(3, action.getSalesMap().size());
-		assertTrue(action.getSalesMap().containsKey("OCT"));
+		assertEquals("success", action.listSixMonthOfSales());
+		assertEquals(3, action.getSaleMap().size());
+		assertTrue(action.getSaleMap().containsKey("OCT"));
 	}
 
 }
