@@ -1,9 +1,11 @@
 package com.bi.action;
 
 import java.util.Collection;
+import java.util.Map;
 
 import com.bi.bean.Purchase;
 import com.bi.dao.PurchaseDAO;
+import com.opensymphony.xwork2.ActionContext;
 
 public class PurchaseAction {
 
@@ -14,9 +16,16 @@ public class PurchaseAction {
 	private Collection<Purchase> yearList;
 
 	public String execute() {
+		@SuppressWarnings("unchecked")
+		Map<String, Object> session = (Map<String, Object>) ActionContext.getContext().get("session");
+
 		lastMonthList = dao.getLastMonthPurchases();
 		actualMonthList = dao.getActualMonthPurchases();
 		yearList = dao.getYearPurchases();
+
+		session.put("lastMonthPurchases", lastMonthList);
+		session.put("actualMonthPurchases", actualMonthList);
+		session.put("yearPurchases", yearList);
 
 		return "success";
 	}
