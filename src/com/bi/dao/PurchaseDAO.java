@@ -11,10 +11,11 @@ public class PurchaseDAO {
 	private static final String SQL_MONTH_FILE = "monthPurchases.sql";
 	private static final String SQL_YEAR_FILE = "yearPurchases.sql";
 
-	private BoxSQL box = new BoxSQL();
 	private Class<Purchase> clazz = Purchase.class;
 
 	public Collection<Purchase> getLastMonthPurchases() {
+		BoxSQL box = new BoxSQL();
+
 		box.setParameter("month", "12");
 
 		@SuppressWarnings("unchecked")
@@ -26,6 +27,8 @@ public class PurchaseDAO {
 	}
 
 	public Collection<Purchase> getActualMonthPurchases() {
+		BoxSQL box = new BoxSQL();
+
 		box.setParameter("month", "10");
 
 		@SuppressWarnings("unchecked")
@@ -37,6 +40,8 @@ public class PurchaseDAO {
 	}
 
 	public Collection<Purchase> getYearPurchases() {
+		BoxSQL box = new BoxSQL();
+
 		box.setParameter("year", "2011");
 
 		@SuppressWarnings("unchecked")
