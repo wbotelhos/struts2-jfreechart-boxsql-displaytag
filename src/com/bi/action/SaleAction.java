@@ -4,14 +4,19 @@ import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import org.jfree.chart.JFreeChart;
+
 import com.bi.bean.Sale;
+import com.bi.chart.SaleChart;
 import com.bi.dao.SaleDAO;
 
 public class SaleAction {
 
 	private SaleDAO dao = new SaleDAO();
+	private SaleChart saleChart = new SaleChart();
 
 	private Map<String, Sale> saleMap;
+	private JFreeChart chart;
 
 	public String listSixMonthOfSales() {
 		saleMap = new LinkedHashMap<String, Sale>();
@@ -25,12 +30,25 @@ public class SaleAction {
 		return "success";
 	}
 
+	public String createChart() {
+		chart = saleChart.createSalesChart();
+		return "chartSuccess";
+	}
+
 	public Map<String, Sale> getSaleMap() {
 		return saleMap;
 	}
 
 	public void setSaleMap(Map<String, Sale> saleMap) {
 		this.saleMap = saleMap;
+	}
+
+	public JFreeChart getChart() {
+		return chart;
+	}
+
+	public void setChart(JFreeChart chart) {
+		this.chart = chart;
 	}
 
 }
