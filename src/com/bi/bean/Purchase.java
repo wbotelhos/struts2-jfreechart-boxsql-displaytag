@@ -7,7 +7,7 @@ public class Purchase implements Serializable {
 
 	private static final long serialVersionUID = 3195971119517378271L;
 
-	private String purchaseNumber;
+	private String number;
 	private Date date;
 	private String item;
 	private String total;
@@ -16,19 +16,19 @@ public class Purchase implements Serializable {
 
 	}
 
-	public Purchase(String purchaseNumber, Date date, String item, String total) {
-		this.purchaseNumber = purchaseNumber;
+	public Purchase(String number, Date date, String item, String total) {
+		this.number = number;
 		this.date = date;
 		this.item = item;
 		this.total = total;
 	}
 
-	public String getPurchaseNumber() {
-		return purchaseNumber;
+	public String getNumber() {
+		return number;
 	}
 
-	public void setPurchaseNumber(String purchaseNumber) {
-		this.purchaseNumber = purchaseNumber;
+	public void setNumber(String number) {
+		this.number = number;
 	}
 
 	public Date getDate() {
