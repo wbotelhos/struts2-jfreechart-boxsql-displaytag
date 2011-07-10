@@ -6,5 +6,6 @@ body { font: normal 12px verdana; }
 
 .titulo {
 	font: bold 12px verdana;
+	margin-bottom: 5px;
 	margin-top: 10px;
 }
