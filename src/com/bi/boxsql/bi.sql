@@ -32,7 +32,7 @@ CREATE TABLE  `bi`.`purchase` (
   `item` varchar(45) NOT NULL DEFAULT '',
   `total` double NOT NULL DEFAULT '0',
   PRIMARY KEY (`number`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `bi`.`purchase`
@@ -42,7 +42,11 @@ CREATE TABLE  `bi`.`purchase` (
 LOCK TABLES `purchase` WRITE;
 INSERT INTO `bi`.`purchase` VALUES  (1,'2010-10-10','1',1),
  (2,'2011-11-11','2',2),
- (3,'2012-12-12','3',3);
+ (3,'2012-12-12','3',3),
+ (4,'2012-12-12','4',4),
+ (5,'2012-12-13','5',5),
+ (6,'2012-12-14','6',6),
+ (7,'2012-12-15','7',7);
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `purchase` ENABLE KEYS */;
 
