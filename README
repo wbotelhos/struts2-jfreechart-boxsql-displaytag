@@ -23,4 +23,9 @@
  * jcommon-1.0.6.jar
  * struts2-jfreechart-plugin-2.0.7.jar
  *
+ * displaytag-1.1.jar
+ * commons-lang-2.1.jar
+ * commons-beanutils-1.7.0.jar
+ * commons-collections-3.1.jar
+ *
  */ 
