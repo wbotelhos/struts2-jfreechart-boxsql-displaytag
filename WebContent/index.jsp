@@ -14,7 +14,7 @@
 	</head>
 	<body>
 		<s:url id="purchaseUrl" action="Purchase" />
-		<s:url id="saleUrl" action="Sale" />
+		<s:url id="saleUrl" action="Sale!listSixMonthOfSales" />
 
 		<s:div label="Purchases" href="%{purchaseUrl}" theme="ajax" refreshOnShow="true" executeScripts="true" cssClass="hidden"></s:div>
 		<s:div label="Sales" href="%{saleUrl}" theme="ajax" refreshOnShow="true" executeScripts="true" cssClass="hidden"></s:div>
